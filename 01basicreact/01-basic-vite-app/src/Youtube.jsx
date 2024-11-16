@@ -1,8 +1,8 @@
 function Youtube(){
     return (
         <>
-        <h1>Youtube App</h1>
-        <h2>Youtube App</h2>
+        <h1>Youtube App from Youtube.JSX</h1>
+        <h2>Youtube App from Youtube.JSX</h2>
         </>
     )
 }
