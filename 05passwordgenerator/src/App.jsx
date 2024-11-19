@@ -15,6 +15,7 @@ function App() {
   //? the password is initially set to empty
 
   const passwordRef = useRef(null)
+  //? useRef is a hook that is commonly used for accessing DOM elements directly or storing mutable values that don't trigger re-renders.
 
   // const generatePassword = useCallback(() => {
   //   //* function to generate password, but there is a high chance of not adding numbers and special characters when the lenght of the password is minimun, because of the probability of selecting a number or a special character from a string which has 26 Alphabets but only 10 Numbers and 12 Special Characters
@@ -40,6 +41,8 @@ function App() {
   // //? these after the array are the dependencies
 
   const generatePassword = useCallback(() => {
+    //? useCallback is a hook that memoizes a function, or loads it in the Cache, preventing it from being re-created on every render. It is primarily used for performance optimization, particularly when dependencies for a function remain unchanged between renders.
+
     //* function to generate password, this will ensure that at least one number and one special character are included in the password when they are checked or selected, and that the rest of the password is randomly generated characters
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -74,9 +77,12 @@ function App() {
   const copyPasswordToClipboard = () => {
     window.navigator.clipboard.writeText(password)
     passwordRef.current?.select()
+    //? if the passwordRef have the current value then select it
     
   }
   useEffect(()=>{
+    //? useEffect is a React hook that lets you perform side effects in functional components. These side effects could include things like fetching data, subscribing to events, or manually manipulating the DOM.
+
     generatePassword()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [length, numberAllowed, charAllowed])
