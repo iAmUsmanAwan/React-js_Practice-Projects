@@ -15,12 +15,14 @@ function InputBox({
 }) {
 
     const id = useId()
+    //? hook to generate unique ids that can be passed to accessability attributes. should not be used to create keys in a list
+
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className='w-1-2'>
                 <label 
                 // htmlFor="currency"
-                htmlFor={id}
+                htmlFor={id}        //? Bind the unique id with label
                 className='text-black/40 mb-2 inline-block'>{label}</label>
                 <input 
                 // id="currency"
@@ -39,17 +41,16 @@ function InputBox({
                 <select 
                 className='rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none'
                 value={selectedCurrency}
-                onChange={(e) => {
-                    const value = Number(e.target.value);
-                    if (!isNaN(value)) {
-                        onCurrencyChange && onCurrencyChange(value);
-                    }
-                }}
-                // onChange={(e)=>{onCurrencyChange && onCurrencyChange(e.target.value)}}
+
+                //* works to change the currency
+                onChange={(e)=>{onCurrencyChange && onCurrencyChange(e.target.value)}}
                 disabled={currencyDisabled}
                 >
                     {currencyOptions.map((currency) => (
-                        <option key={currency} value={currency}>{currency}</option>
+                        //? to increase the performance of React we have to pass the value to key. 
+                        <option key={currency} value={currency}>
+                            {currency}
+                        </option>
                     ))}
                 </select>
 

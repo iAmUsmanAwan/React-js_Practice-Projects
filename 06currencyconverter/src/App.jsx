@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 import {InputBox} from './components/index'
 
@@ -28,6 +27,8 @@ function App() {
     const tempTo = to;
     setFrom(tempTo);
     setTo(tempFrom);
+    setConvertedAmount(amount)
+    setAmount(convertedAmount)
     
     // Recalculate converted amount after swapping
     if (currencyInfo[tempTo]) {
