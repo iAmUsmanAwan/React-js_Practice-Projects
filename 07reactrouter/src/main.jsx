@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-// eslint-disable-next-line no-unused-vars
-import App from './App.jsx'
 import { Route, RouterProvider, createBrowserRouter, 
 createRoutesFromElements} from 'react-router-dom'     //? add these to add React Router
 import Layout from './Layout.jsx'     //? add Layout.jsx

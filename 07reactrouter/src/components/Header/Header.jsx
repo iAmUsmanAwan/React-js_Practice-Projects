@@ -1,4 +1,3 @@
-// import React from "react";
 import { Link, NavLink } from "react-router-dom";      //? Link and NavLink are used to move to router paths and NavLink gives us more features (like, which page we are on and what values you can actually use) 
 
 export default function Header() {

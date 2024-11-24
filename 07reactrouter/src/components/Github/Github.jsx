@@ -1,11 +1,10 @@
-// import React from 'react'
-// import { useEffect } from 'react'
 import {useLoaderData} from 'react-router-dom'
 
 function Github() {
 
     const data = useLoaderData()
 
+    //? to call the data from the api in the console, but we dont want whole of the data
     // const [data, setData] = React.useState([])
     // useEffect(() => {
     //     fetch('https://api.github.com/users/iAmUsmanAwan')
@@ -17,9 +16,12 @@ function Github() {
     // }, [])
 
 return (
-    <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>Github followers: {data.followers}
-    <img src={data.avatar_url} width={300} alt="" />
-    </div>
+    <>
+        <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
+        <img src={data.avatar_url} width={300} alt="Github Image" />
+            Github Bio: {data.bio}
+        </div>
+    </>
     )
 }
 
