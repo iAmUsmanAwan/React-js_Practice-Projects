@@ -1,0 +1,23 @@
+import {useState} from 'react'
+// import PropTypes from 'prop-types'
+import UserContext from './UserContext'
+
+const UserContextProvider = ({ children }) => {
+    if (!children) {
+        console.error("No children passed to UserContextProvider");
+    }
+
+    const [user, setUser] = useState(null)
+    return (
+        <UserContext.Provider value={{user, setUser}}>
+            {children}
+        </UserContext.Provider>
+    );
+
+};
+
+// UserContextProvider.propTypes = {
+//     children: PropTypes.node.isRequired,
+// }
+
+export default UserContextProvider;
