@@ -5,6 +5,8 @@ import UserContext from './UserContext'
 const UserContextProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
+    //? the user is set to null initially
+    
     return (
         <UserContext.Provider value={{user, setUser}}>
             {children}
