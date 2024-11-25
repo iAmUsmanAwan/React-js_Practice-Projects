@@ -1,8 +1,8 @@
-import {useLoaderData} from 'react-router-dom'
+import {useLoaderData} from 'react-router-dom'    //? use this hook to get data from a function that is exported fro, this file 
 
 function Github() {
 
-    const data = useLoaderData()
+    const data = useLoaderData()     //? here the hook is called and stores the data in "data"
 
     //? to call the data from the api in the console, but we dont want whole of the data
     // const [data, setData] = React.useState([])

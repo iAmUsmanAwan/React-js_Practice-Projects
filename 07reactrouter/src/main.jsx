@@ -6,7 +6,7 @@ createRoutesFromElements} from 'react-router-dom'     //? add these to add React
 import Layout from './Layout.jsx'     //? add Layout.jsx
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
-import Github, {githubInfoLoader} from './components/Github/Github.jsx'
+import Github, {githubInfoLoader} from './components/Github/Github.jsx'     //? here githubInfoLoader method is loaded here first
 import User from './components/User/User.jsx'
 
 
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
         <Route path=':userid' element={<User />} />
       </Route>
       <Route 
-      loader={githubInfoLoader}
+      loader={githubInfoLoader}  //? for advance pre proccessing
       path='github' 
       element={<Github />} />
       <Route path='*' element={<div>Not Found</div>} />
