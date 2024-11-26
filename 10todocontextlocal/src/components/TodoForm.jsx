@@ -1,10 +1,10 @@
-// import React from 'react'
 import { useState } from 'react'
 import { useTodo } from '../contexts/Todocontext'
 function TodoForm() {
     const [todo, setTodo] = useState("")
-    const {addTodo} = useTodo()
+    const {addTodo} = useTodo()    //? we brought ii in from the context
 
+    //? the add todo functionality
     const add = (e) => {
         e.preventDefault()
         if (!todo) return

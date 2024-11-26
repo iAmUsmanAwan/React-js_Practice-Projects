@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
 import { useTodo } from '../contexts/Todocontext'
+
+//* for conditoinal rendering of the elements 
 function TodoItem({todo}) {
     
     const [isTodoEditable, setIsTodoEditable] = useState(false)
@@ -8,7 +10,9 @@ function TodoItem({todo}) {
     const [todoMsg, setTodoMsg] = useState(todo.todo)
 
     const {updateTodo, deleteTodo, toggleComplete} = useTodo()
+    //? these functionalities are brought in from context useTodo()
 
+    //? these editTodo and toggleCompleted functionalities could have been made in App.jsx but also be here 
     const editTodo = () => {
         updateTodo(todo.id, {...todo, todo: todoMsg})
         setIsTodoEditable(false)
@@ -20,7 +24,7 @@ function TodoItem({todo}) {
 
     return (
     <div
-    className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"}`}
+    className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"}`}   //? here conditional rendering of the css is done
     >
         <input type="checkbox" 
         className='cursor-pointer'
@@ -28,9 +32,9 @@ function TodoItem({todo}) {
         onChange={toggleCompleted}
         />
         <input type="text" 
-        className={`border outline-none w-full bg-transparent rounded-lg ${isTodoEditable ? "border-black/10 px-2" : "border-transparent"}`}
-        value={todoMsg}
-        onChange={(e) => setTodoMsg(e.target.value)}
+        className={`border outline-none w-full bg-transparent rounded-lg ${isTodoEditable ? "border-black/10 px-2" : "border-transparent"}`}  //? here again conditional rendering of the css is done, majorly the outlining around it which makes it feel like the input field
+        value={todoMsg}  // value will get from the state
+        onChange={(e) => setTodoMsg(e.target.value)}   //? onchange will be govern by the setTodo
         readOnly={!isTodoEditable}
         /> 
         <button
