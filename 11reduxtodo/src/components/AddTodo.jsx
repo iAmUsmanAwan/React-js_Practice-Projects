@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import { addTodo } from '../features/todo/todoSlice'
 
+//? AddTodo component that renders an input field and a submit button. When the user submits the form, it dispatches the addTodo action using the dispatch hook.
+
+//* this is the fourth step
+
 function AddTodo() {
 
     const [input, setInput] = useState('')

@@ -9,7 +9,7 @@ import { store } from './app/store.js'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>   {/* Provides the Redux store */}
+    <Provider store={store}>   {/* Provides the Redux store, this the second step */}
       <App />
     </Provider>
   </React.StrictMode>,
