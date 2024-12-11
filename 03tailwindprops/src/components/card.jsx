@@ -2,17 +2,16 @@
 
 
 function Card(  
-    {// eslint-disable-next-line react/prop-types
+    {
     userName = " User ", 
-        // eslint-disable-next-line react/prop-types
     post = "Not Assigned Yet"
 
-     //? we can use props here but then we have to call everywhere we want to inject a variable as props.userName etc. or . we can pass the {userName} here and assign a default value for it, and then we just call the {username} where required . here username is set to JB as default, if we will not give the username a value then it will be JB, also this is scalable.
+     //? we can use props here but then we have to call everywhere we want to inject a variable as props.userName etc. or . we can pass the {userName} here and assign a default value for it, and then we just call the {username} where required . here username is set to User as default, if we will not give the username a value then it will be User, also this is scalable.
 
 }
     ) {
 
-        //? if we have used Props in the Card function's Argument we can check in consoleof the windows the properties
+        //? if we have used Props in the Card function's Argument we can check in console of the windows the properties
     // console.log(props);
     
 
