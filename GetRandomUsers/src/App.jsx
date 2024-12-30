@@ -22,32 +22,48 @@ function App() {
   };
 
   return (
-    <div className='rounded text-3xl mx-auto ml-10 container py-10 px-10 min-w-full justify-self-center'>
-      <h1 className='rounded text-6xl mx-auto ml-10'>Random User Generator</h1>
-      <hr/> {"      "}
-      <hr/> {"      "}
-      <hr/> {"      "}
-      <button onClick={fetchRandomUser} className=' bg-violet-600 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded items-center'>
-        {loading ? 'Loading...' : 'Get Random User'}
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10">
+  <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-6">
+    <h1 className="text-4xl font-extrabold text-center text-indigo-600 mb-6">
+      Random User Generator
+    </h1>
+    <hr className="border-t-2 border-gray-200 my-4" />
+
+    <div className="flex justify-center mb-6">
+      <button
+        onClick={fetchRandomUser}
+        className={`px-6 py-3 rounded-lg shadow ${
+          loading
+            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            : "bg-indigo-600 text-white hover:bg-indigo-700"
+        } font-bold`}
+        disabled={loading}
+      >
+        {loading ? "Loading..." : "Get Random User"}
       </button>
-
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-
-      {user && (
-        <div style={{ marginTop: '20px' }}>
-          <img
-            src={user.picture.large}
-            alt="User Avatar"
-            style={{ borderRadius: '50%', marginBottom: '10px' }}
-          />
-          <h2>
-            {user.name.title} {user.name.first} {user.name.last}
-          </h2>
-          <p>Email: {user.email}</p>
-          <p>Location: {user.location.city}, {user.location.country}</p>
-        </div>
-      )}
     </div>
+
+    {error && (
+      <p className="text-red-500 text-center font-medium">{error}</p>
+    )}
+
+    {user && (
+      <div className="mt-6 text-center bg-gray-50 p-6 rounded-lg shadow-md">
+        <img
+          src={user.picture.large}
+          alt="User Avatar"
+          className="w-32 h-32 rounded-full mx-auto shadow-lg"
+        />
+        <h2 className="text-2xl font-semibold text-gray-800 mt-4">
+          {user.name.title} {user.name.first} {user.name.last}
+        </h2>
+        <p className="text-lg text-gray-600 mt-2">Email: {user.email}</p>
+        <p className="text-lg text-gray-600">Location: {user.location.city}, {user.location.country}</p>
+      </div>
+    )}
+  </div>
+</div>
+
   );
 }
 
