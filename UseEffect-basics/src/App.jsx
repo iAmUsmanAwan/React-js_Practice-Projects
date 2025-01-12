@@ -17,7 +17,7 @@ function App() {
       <h1>Main Value: {value} </h1>
       <button 
       onClick= {multiplybyfive}
-      >Click to Multiply by 5</button>
+      >Click to Increment by 1 & Multiply by 5</button>
       <h2>Multiplied Value: {multipliedValue}</h2>
     </>
   )
