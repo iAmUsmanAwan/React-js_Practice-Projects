@@ -1,5 +1,7 @@
 # ⚜️ Preview React Projects ⚜️
 #
+###### Built with ❤️ using React, Tailwind CSS, and Vite.
+
 
 ## 1. React Counter App with Vite 🔄
 
@@ -135,7 +137,7 @@ Key Features:
 ### 🔗 Live Demo: [View on Netlify](https://todo-context-local-react.netlify.app/)
 
 
-## 10. Redux Todo Manager ♻️
+## 10. Todo Manager `Redux` ♻️
 
 ### Description:
 Redux Todo Manager is an advanced task management application built with React and Redux Toolkit. It efficiently manages the state of the todo list by using Redux for predictable state management. This app allows users to add, edit, delete, and toggle the completion status of tasks with a smooth and responsive user interface.
@@ -175,16 +177,32 @@ Reset Function: Resets the count to the initial value.
 ### 🔗 Live Demo: [View on Netlify](https://custom-hook-react-01.netlify.app/)
 
 
-## 12. 
+## 12. `UseEffect` Hook Alternative 🧬
 
 ### Description:
+This app allows the user to increment a base value by 1 and then display its multiplied result by 5. Every time the user clicks the button, the main value increases by 1, and the multiplied value (value * 5) is automatically updated and displayed.
 
-### 🔗 Live Demo: [View on Netlify](https://react-router-pages-linked.netlify.app/)
+Features:
+- Increment Value: Increases the main value by 1 with every click.
+- Multiply by 5: Displays the result of multiplying the main value by 5.
+- Interactive UI: A button to trigger the increment and multiplication.
+
+### 🔗 Live Demo: [View on Netlify](https://use-effect-hook-alternate.netlify.app/)
 
 
-## 13. 
+## 13. Random User Generator 👤
 
 ### Description:
+The Random User Generator is a simple React application that fetches and displays a random user's profile using the Random User API. With just a click, it presents user details such as their name, email, location, and profile picture.
 
-### 🔗 Live Demo: [View on Netlify](https://react-router-pages-linked.netlify.app/)
+Features:
+- Fetch Random User: Retrieves a random user's details with one click.
+- Loading State: Displays a loading indicator while fetching data.
+- Error Handling: Shows an error message if the API request fails.
+- User Profile Display: Presents the user's name, email, location, and avatar.
+- Responsive UI: Clean and responsive design using Tailwind CSS for styling.
 
+### 🔗 Live Demo: [View on Netlify](https://random-user-generator-react-api.netlify.app/)
+
+#
+###### This repository also includes more examples and projects demonstrating the fundamentals of React. Feel free to explore!
