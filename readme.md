@@ -1,5 +1,5 @@
 # ⚜️ Preview React Projects ⚜️
-
+#
 
 ## 1. React Counter App with Vite 🔄
 
@@ -73,23 +73,84 @@ Features:
 ### 🔗 Live Demo: [View on Netlify](https://currency-exchanger-0.netlify.app/)
 
 
-## 6. React Router Multi-Page App 🚀
+## 6. React Router - Multi-Page App ✨
 
 ### Description:
 This is a React Multi-Page Application using React Router v6. It includes multiple pages such as Home, About, Contact, User, and a GitHub data page. The app utilizes advanced routing features like dynamic routes, nested routes, and data loading with loader functions for pre-processing data before rendering.
 
 Features:
 - Home, About, Contact Pages with smooth navigation
-- Dynamic User Routes (/user/:userid)
 - GitHub Data Fetching with loader for optimized data loading
 - 404 Not Found Page for invalid routes
 - Modular Layout with consistent UI across pages
 - Fast and Efficient Routing with React Router v6
+- Dynamic User Routes (/user/:userid)
+
+### 🔗 Live Demo: [View on Netlify](https://react-router-pages-linked.netlify.app/)
+
+
+## 7. React Context - User Profile Viewer App 🔎
+
+### Description:
+This is a lightweight React application that allows users to log in and view their profile information. It utilizes React's Context API for global state management, making it easy to handle user data across components.
+
+Features:
+- Profile display after login  
+- Global state management using React Context API  
+- Clean and intuitive UI  
+
+### 🔗 Live Demo: [View on Netlify](https://mini-context-react.netlify.app/)
+
+
+## 8. React Light/Dark Theme Switcher 💡
+
+### Description:
+A simple React app that lets users switch between light and dark themes. It uses the Context API for global state management and `useEffect` for real-time theme updates.
+
+Features
+- Light and dark theme toggle  
+- Global state management with React Context API  
+- Smooth theme transitions  
+- Responsive UI design  
+
+### 🔗 Live Demo: [View on Netlify](https://theme-switcher-context.netlify.app/)
+
+
+## 9. React Todo Manager 📝
+
+### Description:
+React Todo Manager is a simple and efficient task management application built with React. It allows users to add, update, delete, and mark tasks as complete. The app ensures that your tasks are saved in your browser's local storage, so they remain available even after refreshing the page or closing the browser.
+
+Key Features:
+- Quickly add tasks to your to-do list.
+- Prevents adding empty tasks for better usability.
+- Easily update the content of your existing tasks.
+- Remove tasks that are no longer needed.
+- Toggle tasks between completed and incomplete states.
+- Tasks are automatically saved to the browser’s local storage.
+- Tasks remain even after page reloads or closing the browser.
+- Clean and responsive design built with Tailwind CSS for a seamless experience across devices.
+- The UI instantly reflects any changes made to the task list.
+
+### 🔗 Live Demo: [View on Netlify](https://todo-context-local-react.netlify.app/)
+
+
+## 7. 
+
+### Description:
 
 ### 🔗 Live Demo: [View on Netlify](https://react-router-pages-linked.netlify.app/)
 
 
 ## 7. 
 
+### Description:
+
+### 🔗 Live Demo: [View on Netlify](https://react-router-pages-linked.netlify.app/)
+
+
+## 7. 
+
+### Description:
 
 ### 🔗 Live Demo: [View on Netlify](https://react-router-pages-linked.netlify.app/)
